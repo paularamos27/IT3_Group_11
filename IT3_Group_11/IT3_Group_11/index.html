@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ramos & Gutierrez Portfolio</title>
+</head>
+<body>
+    <div class="header-container">
+        <header class="text-center">
+            <h1>Ramos & Gutierrez</h1>
+        </header>
+
+        <nav class="text-center"> 
+            <ul>
+                <li><a href="#home" onclick="showSection('welcome')">Home</a></li>
+                <li><a href="#about" onclick="showSection('aboutRamos')">About Ramos</a></li>
+                <li><a href="#gutierrez" onclick="showSection('aboutGutierrez')">About Gutierrez</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="content">
+        <section id="welcome" class="text-center">
+            <h2>WELCOME TO OUR PORTFOLIO!</h2>
+            <div class="team-member">
+                <img src="images/image1.jpg" alt="Paula Jean Ramos"><h2>Paula Jean Ramos</h2>
+                <img src="images/image2.jpg" alt="Allan Gutierrez"><h2>Allan Gutierrez</h2>
+                
+            </div>
+        </section>
+        
+        <!-- Paula Jean Ramos Section -->
+        <section id="aboutRamos" class="text-center">
+            <div class="about-info">
+                <h3>ABOUT PAULA JEAN RAMOS</h3>
+                <Beyond>Hi, I'm a third-year BSIT student at First Asia Institute of Technology and Humanities. I love technology and enjoy learning about it. My passion lies in editing whether it's videos or graphics. I've been exploring various aspects of IT in my studies, gaining skills in programming. Beyond academics, I have a creative side. Editing allows me to express myself and bring ideas to life visually. I'm excited about continuing to learn and grow in both technology and creativity. Feel free to check out my portfolio to see some of my projects!</p>
+            </div>
+            <div class="about-buttons">
+                 <button class="ramos-button" onclick="showSection('projectsRamos')">Projects</button>
+                 <button class="ramos-button" onclick="showSection('contactFormRamos')">Contact Me</button>
+             </div>
+        </section>
+
+        <section id="projectsRamos" class="text-center">
+            <!-- Projects for Ramos -->
+            <div class="project">
+                <img src="images/image3.jpg" alt="Ramos's Project 1 image3"> <h3>Ramos's Project 1: QrCode</h3>
+                <img src="images/image4.jpg" alt="Ramos's Project 2 image4"> <h3>Ramos's Project 2: Newspaper</h3>    
+            </div>
+        </section>
+
+        <section id="contactFormRamos" class="text-center">
+            <!-- Contact Form for Ramos -->
+            <h3>Contact Me</h3>
+            <form>
+                <label for="nameRamos">Enter Your Name:</label>
+                <input type="text" id="nameRamos" name="nameRamos" required>
+
+                <label for="emailRamos">Enter Your Email:</label>
+                <input type="email" id="emailRamos" name="emailRamos" required>
+
+                <label for="messageRamos">Enter Your Message:</label>
+                <textarea id="messageRamos" name="messageRamos" rows="4" required></textarea>
+
+                <button type="button" onclick="sendMessage('Paula Jean Ramos')">Send</button>
+            </form>
+        </section>
+
+        <!-- Allan R. Gutierrez Section -->
+        <section id="aboutGutierrez" class="text-center">
+            <div class="about-info">
+                <h3>ABOUT ALLAN GUTIERREZ</h3>
+                <p>Hello! My name is Allan Gutierrez. I am an IT student with a passion for repairing motorcycles, drawing, and working with electronics. I enjoy the challenge of repairing motorcycle parts and finding creative solutions to fix appliances. My love for electronics has driven me to further my knowledge in the IT field. I believe my combination of technical skills and artistic interests allows me to approach problems from multiple perspectives. I am enthusiastic about learning and constantly expanding my abilities.</p>
+            </div>
+            <div class="about-buttons">
+                  <button class="gutierrez-button" onclick="showSection('projectsGutierrez')">Projects</button>
+                  <button class="gutierrez-button" onclick="showSection('contactFormGutierrez')">Contact Me</button>
+            </div>
+         </section>
+
+        <section id="projectsGutierrez" class="text-center">
+            <!-- Projects for Gutierrez -->
+            <div class="project">
+                <img src="images/image5.jpg" alt="Gutierrez's Project 1 image5"> <h3>Gutierrez's Project 1: Newspaper</h3>
+                <img src="images/image6.jpg" alt="Gutierrez's Project 2 image6"> <h3>Gutierrez's Project 2: QrCode</h3>
+            </div>
+        </section>
+
+        <section id="contactFormGutierrez" class="text-center">
+            <!-- Contact Form for Gutierrez -->
+            <h3>Contact Me</h3>
+            <form>
+                <label for="nameGutierrez">Enter Your Name:</label>
+                <input type="text" id="nameGutierrez" name="nameGutierrez" required>
+
+                <label for="emailGutierrez">Enter Your Email:</label>
+                <input type="email" id="emailGutierrez" name="emailGutierrez" required>
+
+                <label for="messageGutierrez">Enter Your Message:</label>
+                <textarea id="messageGutierrez" name="messageGutierrez" rows="4" required></textarea>
+
+                <button type="button" onclick="sendMessage('Allan Gutierrez')">Send</button>
+            </form>
+        </section>
+
+        <!-- Additional Sections for Projects... -->
+        
+        </main>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content section').forEach(function (section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function sendMessage(name) {
+            // Handle sending message logic here
+            alert('Message sent to ' + name);
+        }
+
+        // Initially show the welcome section
+        showSection('welcome');
+    </script>
+</body>
+</html>                                                        
